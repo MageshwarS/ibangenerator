@@ -1,0 +1,93 @@
+.container {
+  max-width: 480px;
+  width: 100%; 
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: rgb(255, 248, 248);
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #667eea, #39244f);
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  color: #333;
+   background-color: #f3f3f3;
+}
+
+button {
+    width: fit-content;
+  background-color: #ff6f61;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  /* width: 100%; */
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #ff3b2d;
+}
+
+.iban-output {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.copied-text {
+  color: #a3ffba;
+  font-weight: bold;
+}
+
+.combo-container {
+  position: relative;
+  width:100%;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  right: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  background: #f3f3f3;
+  color: black;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 10;
+  width:95%;
+}
+
+.dropdown-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background-color: #667eea;
+  color: white;
+}

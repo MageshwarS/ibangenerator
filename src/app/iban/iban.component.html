@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>Random IBAN Generator</h2>
+
+  <label for="countryInput">Country Code:</label>
+  <div class="combo-container" style="position: relative;">
+    <input
+      id="countryInput"
+      type="text"
+      [value]="inputValue"
+      (input)="onInputChange($any($event.target).value)"
+      (focus)="dropdownOpen = filteredCountries.length > 0"
+      placeholder="Type country code..."
+      autocomplete="off"
+    />
+    <ul
+      *ngIf="dropdownOpen"
+      class="dropdown-list"
+    >
+      <li
+        *ngFor="let code of filteredCountries"
+        (click)="selectCountry(code)"
+      >
+        {{ code }}
+      </li>
+    </ul>
+  </div>
+
+  <button (click)="generate()">Generate</button>
+
+  <div *ngIf="iban" class="iban-output">
+    <strong>IBAN:</strong>
+    <pre>{{ iban }}</pre>
+    <button (click)="copyToClipboard()">Copy</button>
+    <span *ngIf="copied" class="copied-text">Copied!</span>
+  </div>
+</div>
